@@ -41,7 +41,6 @@ export default class BoardDetails extends LightningElement {
     async updateSectionItemDescriptionHandler(event){
         let itemId = event.target.dataset.boardSectionItemId;
         let itemDesc = event.target.value;
-        console.log('check for upload');
         const fields = {Id : itemId , Description__c : itemDesc};
         await updateRecord({fields});
     }
